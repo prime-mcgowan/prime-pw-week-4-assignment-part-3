@@ -3,12 +3,15 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 
 //console test
+console.log('***Testing Console***');
 console.log('js');
 
 
 //Create a global variable named basket and set it to an empty array.
+console.log('***Global variable named basket set to empty array:***');
 
 let basket = [];
+console.log(basket);
 
 
 //Create a function called addItem. 
@@ -18,20 +21,21 @@ let basket = [];
  - return true indicating the item was added
 */
 
+console.log('*** addItem function / add new item / return true***');
 
 function addItem(item){   
  basket.push(item); 
  return true; 
 }
  
-console.log(addItem('shampoo'));
-console.log(basket);
+console.log('Adding shampoo (expect true)',addItem('shampoo'));
+console.log('Basket now has:' , basket);
 
-console.log(addItem('conditioner'));
-console.log(basket);
+console.log('Adding conditioner(expect true)',addItem ('conditioner'));
+console.log('Basket now has:', basket);
 
-console.log(addItem('soap'));
-console.log(basket);
+console.log('Adding soap(expect true)',addItem('soap'));
+console.log('Basket now has:',basket);
 
 
 
@@ -54,16 +58,19 @@ console.log('added shampoo to basket', basket);*/
 //Create a function called listItems. 
 /*It should:
  - loop over the items in the basket array
- - console.log each individual item on a new line
- */
+ - console.log each individual item on a new line*/
+ 
+ /*basket = ['shampoo', 'conditioner', 'soap'];*/
 
 
-basket = ['shampoo', 'conditioner', 'soap'];
+console.log('***listItems function / loop over items/ console individually***');
 
  function listItems(basket) {
     for (let i=0; i < basket.length; i++)
     console.log('looping through basket items:', basket[i]);
+    return basket;
  }
+ //
  console.log(listItems(basket));
 
 
@@ -72,38 +79,21 @@ basket = ['shampoo', 'conditioner', 'soap'];
  - reset the basket to an empty array
  */
 
+
+ console.log('***empty function / should empty array***');
  basket.splice(0,basket.length);
  console.log(basket);
  
 
-
-
  function empty(basket){
-   basket = (basket.splice(0,basket.length))
+   basket = (basket.splice(0,basket.length));
    return basket;
 }
 console.log(empty(basket));
 
 
 
-/*
-function empty(basket) {
-basket.splice(0,basket.length);}
 
-console.log(empty (basket));
-
-
-
-/*
-function empty() {
-   for (let i=0; i < basket.length; i--) {
-      basket.splice(0,basket.length)
-   }
-   return empty;
-}
-
-console.log(empty());
-*/
 
 
 
