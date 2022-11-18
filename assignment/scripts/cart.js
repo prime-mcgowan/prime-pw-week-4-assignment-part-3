@@ -127,12 +127,12 @@ console.log(isFull(basket));
 
 
 
-/*
+
 console.log('***update addItem function***')
 
-function isFull(item){
+function addItem(item){
 for(i=0; i<basket.length; i++) {
-   if(basket.length > maxItems){
+   if(basket.length < maxItems){
       basket.push(item)
       return true;  
    }
@@ -142,10 +142,12 @@ for(i=0; i<basket.length; i++) {
 }
 
 basket = ['a', 'b', 'c'];
-console.log(basket);
-console.log(isFull('d'));
+console.log(addItem('d'));
 console.log(basket);
 
+basket = ['a', 'b', 'c', 'd', 'e', 'f'];
+console.log(addItem('g'));
+console.log(basket);
 
 
 
@@ -187,6 +189,8 @@ console.log('Basket now has:',basket);
 
 //Stretch #4//
 
+
+
 console.log('***removeItem function***')
 
 /*
@@ -202,13 +206,24 @@ basket.splice(2);
 console.log(basket);
 */
 
+
+
 basket = ['shampoo', 'conditioner', 'soap'];
 
 function removeItem(item) {
    let index = basket.indexOf('soap');
-  
+   return index;
+   for(let i=0; i<basket.length; i++) {
+     basket.splice(2);
+     return item;
+   }
 }
 
-console.log(removeItem('soap'));
+   
+console.log(removeItem());
+
+
+
+
 
 
