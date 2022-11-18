@@ -92,11 +92,42 @@ console.log('***listItems function / loop over items/ console individually***');
 console.log(empty(basket));
 
 
+//Stretch Goals
+
+const maxItems = 5;
+console.log(maxItems);
+
+
+function isFull(basket) {
+   for(i=0; i < basket.length; i++) {  
+      if(basket.length < maxItems) {
+      return false;
+}
+} 
+return true;     
+}
+
+
+basket = ['shampoo', 'conditioner', 'soap']; //3 items = false
+console.log(basket);
+console.log(isFull(basket));
+
+basket = ['a', 'b', 'c', 'd', 'e',]; //5 items = true
+console.log(basket);
+console.log(isFull(basket));
+
+basket = ['a', 'b', 'c', 'd', 'e', 'f']; //6 items = true
+console.log(basket);
+console.log(isFull(basket));
 
 
 
+/*
+   else if(basket[i] >= maxItems) {
+   return false;
+}
+
+  for(i=0; i < basket.length; i++) {
 
 
-
-
-
+*/
