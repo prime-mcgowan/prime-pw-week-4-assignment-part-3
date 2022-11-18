@@ -60,7 +60,7 @@ console.log('added shampoo to basket', basket);*/
  - loop over the items in the basket array
  - console.log each individual item on a new line*/
  
- /*basket = ['shampoo', 'conditioner', 'soap'];*/
+ basket = ['shampoo', 'conditioner', 'soap'];
 
 
 console.log('***listItems function / loop over items/ console individually***');
@@ -70,7 +70,7 @@ console.log('***listItems function / loop over items/ console individually***');
     console.log('looping through basket items:', basket[i]);
     return basket;
  }
- //
+ 
  console.log(listItems(basket));
 
 
@@ -93,11 +93,13 @@ console.log(empty(basket));
 
 
 //Stretch Goals
+console.log('**********STRETCH GOALS*********');
 
+console.log('***Global const named maxItems set to 5***')
 const maxItems = 5;
 console.log(maxItems);
 
-
+console.log('***isFull Function / return false if less than 5 / return true if greater than or equal to 5***')
 function isFull(basket) {
    for(i=0; i < basket.length; i++) {  
       if(basket.length < maxItems) {
@@ -107,27 +109,106 @@ function isFull(basket) {
 return true;     
 }
 
-
 basket = ['shampoo', 'conditioner', 'soap']; //3 items = false
-console.log(basket);
+console.log('Current items in basket 3 (expect false):', basket);
 console.log(isFull(basket));
 
 basket = ['a', 'b', 'c', 'd', 'e',]; //5 items = true
-console.log(basket);
+console.log('Current items in basket 5 (expect true):', basket);
 console.log(isFull(basket));
 
 basket = ['a', 'b', 'c', 'd', 'e', 'f']; //6 items = true
-console.log(basket);
+console.log('Current items in basket 6 (expect true):',basket);
 console.log(isFull(basket));
+
+
+
+
 
 
 
 /*
-   else if(basket[i] >= maxItems) {
+console.log('***update addItem function***')
+
+function isFull(item){
+for(i=0; i<basket.length; i++) {
+   if(basket.length > maxItems){
+      basket.push(item)
+      return true;  
+   }
+   
+      return false;
+}
+}
+
+basket = ['a', 'b', 'c'];
+console.log(basket);
+console.log(isFull('d'));
+console.log(basket);
+
+
+
+
+
+/*
+function addItem(item) {
+   for(i=0; i<basket.length; i++) {
+      if(basket.length > isFull){
+         basket.push(item)
+      return true;
+}
+}
    return false;
 }
 
-  for(i=0; i < basket.length; i++) {
+basket = ['shampoo', 'conditioner', 'soap'];
+console.log(addItem('candy'));
+
+/*for(i=0; i<basket.length; i++) */
 
 
+/*
+console.log('*** addItem function / add new item / return true***');
+
+function addItem(item){   
+ basket.push(item); 
+ return true; 
+}
+ 
+console.log('Adding shampoo (expect true)',addItem('shampoo'));
+console.log('Basket now has:' , basket);
+
+console.log('Adding conditioner(expect true)',addItem ('conditioner'));
+console.log('Basket now has:', basket);
+
+console.log('Adding soap(expect true)',addItem('soap'));
+console.log('Basket now has:',basket);
 */
+
+//Stretch #4//
+
+console.log('***removeItem function***')
+
+/*
+//Array.indexOf
+basket = ['shampoo', 'conditioner', 'soap'];
+console.log(basket);
+let index = basket.indexOf('soap');
+console.log(index);
+
+//Array.splice
+console.log(basket);
+basket.splice(2);
+console.log(basket);
+*/
+
+basket = ['shampoo', 'conditioner', 'soap'];
+
+function removeItem(item) {
+   let index = basket.indexOf('soap');
+  
+}
+
+console.log(removeItem('soap'));
+
+
