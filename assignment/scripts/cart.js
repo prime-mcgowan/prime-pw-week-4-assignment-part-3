@@ -206,24 +206,26 @@ basket.splice(2);
 console.log(basket);
 */
 
-
+/*I know the code below isn't exactly right...but it shows what I was trying to work out*/
 
 basket = ['shampoo', 'conditioner', 'soap'];
 
 function removeItem(item) {
    let index = basket.indexOf('soap');
    return index;
-   for(let i=0; i<basket.length; i++) {
-     basket.splice(2);
-     return item;
-   }
 }
 
-   
 console.log(removeItem());
 
+/*
 
+basket = ['shampoo', 'conditioner', 'soap'];
 
-
-
-
+function removeItem(item) {
+   for(let i=0; i<basket.length; i++) {
+      basket.splice(2);
+      return item;
+    } 
+ console.log(removeItem());
+}
+*/
