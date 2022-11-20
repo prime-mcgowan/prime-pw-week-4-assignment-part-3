@@ -79,8 +79,9 @@ console.log('***listItems function / loop over items/ console individually***');
  - reset the basket to an empty array
  */
 
-
  console.log('***empty function / should empty array***');
+
+ console.log('items currently in basket:', basket);
  basket.splice(0,basket.length);
  console.log(basket);
  
@@ -206,16 +207,34 @@ basket.splice(2);
 console.log(basket);
 */
 
-/*I know the code below isn't exactly right...but it shows what I was trying to work out*/
+//I know the code below isn't right...but it shows what I was trying to work out
+//I can't figure out how to join the two pieces of code...individually they work.
+
 
 basket = ['shampoo', 'conditioner', 'soap'];
 
-function removeItem(item) {
+function removeItem() {
    let index = basket.indexOf('soap');
    return index;
 }
-
 console.log(removeItem());
+
+basket = basket.splice(2,1);
+console.log(basket);
+
+
+//Trying to get null reponse
+
+/*
+basket = basket.splice(4,1);{
+   let(i=0; i<basket.length; i++){
+      if i===splice;{
+      return item;
+   }
+   return null;
+}
+}
+console.log(basket);
 
 /*
 
