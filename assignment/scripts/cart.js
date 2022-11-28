@@ -96,10 +96,28 @@ console.log(empty(basket));
 //Stretch Goals
 console.log('**********STRETCH GOALS*********');
 
+
+/*2. Create a function called isFull(). It should:
+  - return `false` if the basket contains *less* than max number of items
+  - return `true` otherwise (equal or more than maxItems)
+  */
+
 console.log('***Global const named maxItems set to 5***')
 const maxItems = 5;
 console.log(maxItems);
 
+function isFull(basket) {
+   if (basket.length < maxItems){
+   return false;
+   }
+else {
+   return true;
+}
+}
+
+
+
+/*
 console.log('***isFull Function / return false if less than 5 / return true if greater than or equal to 5***')
 function isFull(basket) {
    for(i=0; i < basket.length; i++) {  
@@ -109,6 +127,7 @@ function isFull(basket) {
 } 
 return true;     
 }
+*/
 
 basket = ['shampoo', 'conditioner', 'soap']; //3 items = false
 console.log('Current items in basket 3 (expect false):', basket);
